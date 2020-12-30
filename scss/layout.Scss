@@ -1,0 +1,264 @@
+@use "variable";
+
+$size:100px;
+/*
+  scss header
+ */
+header {
+  width: 100%;
+  height: auto;
+  /*
+      Menu
+   */
+  .header_Menu{
+    width: auto;
+
+  }
+  .header_btn{
+    .header_btn-group{
+      button{
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+/*
+    end header
+ */
+
+/*
+  section introduce
+ */
+
+section{
+
+    .introduce{
+      margin-top: 3.125em;
+
+      .introduct-media_title{
+
+        h1{
+          font-size: 1rem;
+          color:black;
+          margin-bottom: 40px;
+        }
+
+        h1.aft-bg-color_pink{
+
+          &:after{
+            background-color: variable.$background_color-pink;
+          }
+        }
+
+        h1.aft-bg-color_light_green{
+
+          &:after{
+            background-color: variable.$background_color-light_green;
+          }
+        }
+
+        h1.aft-bg-color_purple{
+
+          &:after{
+            background-color: variable.$background_color-purple;
+          }
+        }
+
+        h1.aft-bg-color_light_blue{
+
+          &:after{
+            background-color: variable.$background_color-light_blue;
+          }
+        }
+
+      }
+    }
+}
+
+/*
+ section ovl
+ */
+
+.ovl{
+  &-title{
+    margin: 50px auto;
+  }
+  /*
+      tag strong
+   */
+
+  &-body{
+    display: flex;
+    flex-wrap: wrap;
+
+    &_image{
+      width: 40%;
+      height: 614px;
+      background-color: variable.$background_color_aqua;
+      @extend %position-relative;
+      z-index: 12;
+      border-top-right-radius: variable.$size-top-bottom_radius;
+      border-bottom-right-radius: variable.$size-top-bottom_radius;
+
+      .wrap_image {
+        height: 435px;
+        overflow: hidden;
+        @extend %position-absolute;
+        top: 15%;
+        left: 10%;
+        z-index: 10;
+        transition:  height 0.5s;
+        &:hover{
+          height: 150%;
+          transition:height 1.5s;
+        }
+        /*
+          tag img
+        */
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+
+    }
+
+    /*
+        carousel
+     */
+    .ovl-body_carousel{
+      width: 45%;
+      overflow-x: hidden;
+      ._carousel-group{
+        transition: 2s;
+        display: -webkit-box;
+        padding-top:100px ;
+      }
+
+      ._carousel{
+
+        ._carousel-item{
+
+
+          ._carousel-item_media{
+
+              span{
+                height: 40px;
+                width: 25px;
+                border: 3px  solid variable.$color-lightness;
+                z-index: auto;
+                margin-left: 5%;
+                &:after{
+                  left: -150%;
+                  bottom: 40%;
+                  background-color: variable.$background_color-pink;
+                }
+              }
+          }
+          ._carousel-item_text{
+            width: 95%;
+            margin-top: 0.973rem;
+
+          }
+        }
+      }
+      ._carousel-list{
+        text-align: center;
+        margin-top: 20px;
+          li{
+            display: inline-block;
+            border: 1px solid gray;
+            text-indent: -9999px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            margin: 0 5px;
+
+          }
+      }
+      .active-item{
+        background-color: #5E68F9;
+      }
+
+    }
+
+  }
+}
+/*
+ section media
+ */
+.media{
+
+  margin: 5% auto;
+  padding: 5% 0;
+  background-color:#FCF3EC;
+
+  .media-title{
+
+    margin-bottom: 15px;
+
+
+    .media-title_sticker{
+        height: 70px;
+        width: 70px;
+        @extend  %position-relative;
+
+        &:after{
+          content: "";
+          height: 20px;
+          width: 10px;
+          position: absolute;
+          top: 40%;
+          left: 25%;
+          border: 2px solid #FD9B9B
+      }
+      &.purple:after{
+        border-color: #B06BF1;
+      }
+      &.green:after{
+        border-color: #45CCDB;
+      }
+      &.turquoise:after{
+        border-color: #48DE57;
+      }
+    }
+  }
+
+  .media-text{
+    width: 80%;
+  }
+}
+/*
+  section port
+
+ */
+.port{
+
+  .port-body{
+      .port-body_img_desgin{
+        width: 100%;
+
+        img{
+          width: 100%;
+        }
+        .port-body_design:after{
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: -16%;
+          z-index: 1111;
+          border-bottom: 16px solid #383E95;
+          border-right: 15px solid transparent;
+        }
+      }
+    .port-body-text{
+      margin: 10px 0;
+      h3,p{
+        padding: 5px 0;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,51 @@
+/*
+  variable border
+*/
+  $size-border_radius: 10px;
+
+  $size-top-bottom_radius:50px;
+/*
+    variable background
+*/
+  $background_color-pink:#FBE9E9;
+  $background_color-light_green:#E7FAF9;
+  $background_color-purple:#F5ECFD;
+  $background_color-light_blue:#E7EFFB;
+  $background_color_aqua:#F0F9FE;
+/*
+    variable color
+*/
+  $color-global:#5E68F9;
+  $color-lightness: #616AE8;
+  $color-saturation:#20E5A7;
+/*
+    variable margin
+*/
+  $margin:0.9375rem;
+  %margin-auto{
+    margin: auto;
+  }
+
+/*
+    position
+*/
+
+  /*
+      relative
+   */
+  %position-relative{
+    position: relative;
+  }
+
+  /*
+      absolute
+   */
+  %position-absolute{
+    position: absolute;
+  }
+  /*
+      fixed
+   */
+  %position-fixed{
+    position: fixed;
+  }

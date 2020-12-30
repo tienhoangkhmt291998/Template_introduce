@@ -1,0 +1,118 @@
+
+
+@media only screen and(max-width: 992px) and (min-width: 0){
+  $btn-rem:3rem;
+  .header{
+
+    .header_Menu{
+
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        z-index: 111111111;
+        transform: translateX(100%);
+        transition: 1.5s;
+        background: rgba(102, 96, 96,0.5);
+
+      ul{
+        display: block;
+        transition: width 2s;
+
+        li{
+          padding: 15px 0;
+
+          a{
+            color: white;
+
+            &:hover{
+              padding-left:10px ;
+              transition: ease 1s;
+              letter-spacing: 3px;
+            }
+          }
+        }
+      }
+
+    }
+    .header_btn{
+
+    }
+    .navbar-toggler{
+      height:$btn-rem;
+      width:$btn-rem;
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 222222222222;
+      font-size: 36px;
+      background-color: gainsboro;
+      border: 1px solid white;
+      outline: 1px solid transparent;
+      color: #ffffff;
+
+      &:focus{
+        outline: 5px auto black;
+        border: 1px solid transparent;
+      }
+
+    }
+
+  }
+  /*
+      ovl
+   */
+
+
+  .ovl-body_image{
+      width: 100%;
+
+    .wrap_image{
+      left: 0;
+      img{
+        width: 100%;
+      }
+    }
+
+  }
+  .ovl-body_carousel{
+    width: 100% !important;
+    overflow-x: hidden;
+    padding: 65px 0;
+    ._carousel-group{
+      display: -webkit-box;
+      transition: 2s;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 320px) {
+  /*
+        header
+   */
+
+  .aftter-circle:after {
+    left: -9%;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+
+  .aftter-circle:after {
+    left: -9%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1150px) {
+    .ovl-body_image .wrap_image{
+      left: 0;
+    }
+}
+

@@ -1,0 +1,229 @@
+/*
+  variable border
+*/
+/*
+    variable background
+*/
+/*
+    variable color
+*/
+/*
+    variable margin
+*/
+/*
+    position
+*/
+/*
+    relative
+ */
+.ovl-body_image, .media .media-title .media-title_sticker {
+  position: relative;
+}
+
+/*
+    absolute
+ */
+.ovl-body_image .wrap_image {
+  position: absolute;
+}
+
+/*
+    fixed
+ */
+/*
+  scss header
+ */
+header {
+  width: 100%;
+  height: auto;
+  /*
+      Menu
+   */
+}
+header .header_Menu {
+  width: auto;
+}
+header .header_btn .header_btn-group button {
+  font-size: 1.3rem;
+}
+
+/*
+    end header
+ */
+/*
+  section introduce
+ */
+section .introduce {
+  margin-top: 3.125em;
+}
+section .introduce .introduct-media_title h1 {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 40px;
+}
+section .introduce .introduct-media_title h1.aft-bg-color_pink:after {
+  background-color: #FBE9E9;
+}
+section .introduce .introduct-media_title h1.aft-bg-color_light_green:after {
+  background-color: #E7FAF9;
+}
+section .introduce .introduct-media_title h1.aft-bg-color_purple:after {
+  background-color: #F5ECFD;
+}
+section .introduce .introduct-media_title h1.aft-bg-color_light_blue:after {
+  background-color: #E7EFFB;
+}
+
+/*
+ section ovl
+ */
+.ovl {
+  /*
+      tag strong
+   */
+}
+.ovl-title {
+  margin: 50px auto;
+}
+.ovl-body {
+  display: flex;
+  flex-wrap: wrap;
+  /*
+      carousel
+   */
+}
+.ovl-body_image {
+  width: 40%;
+  height: 614px;
+  background-color: #F0F9FE;
+  z-index: 12;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.ovl-body_image .wrap_image {
+  height: 435px;
+  overflow: hidden;
+  top: 15%;
+  left: 10%;
+  z-index: 10;
+  transition: height 0.5s;
+  /*
+    tag img
+  */
+}
+.ovl-body_image .wrap_image:hover {
+  height: 150%;
+  transition: height 1.5s;
+}
+.ovl-body_image .wrap_image img {
+  width: auto;
+  height: auto;
+}
+.ovl-body .ovl-body_carousel {
+  width: 45%;
+  overflow-x: hidden;
+}
+.ovl-body .ovl-body_carousel ._carousel-group {
+  transition: 2s;
+  display: -webkit-box;
+  padding-top: 100px;
+}
+.ovl-body .ovl-body_carousel ._carousel ._carousel-item ._carousel-item_media span {
+  height: 40px;
+  width: 25px;
+  border: 3px solid #616AE8;
+  z-index: auto;
+  margin-left: 5%;
+}
+.ovl-body .ovl-body_carousel ._carousel ._carousel-item ._carousel-item_media span:after {
+  left: -150%;
+  bottom: 40%;
+  background-color: #FBE9E9;
+}
+.ovl-body .ovl-body_carousel ._carousel ._carousel-item ._carousel-item_text {
+  width: 95%;
+  margin-top: 0.973rem;
+}
+.ovl-body .ovl-body_carousel ._carousel-list {
+  text-align: center;
+  margin-top: 20px;
+}
+.ovl-body .ovl-body_carousel ._carousel-list li {
+  display: inline-block;
+  border: 1px solid gray;
+  text-indent: -9999px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.ovl-body .ovl-body_carousel .active-item {
+  background-color: #5E68F9;
+}
+
+/*
+ section media
+ */
+.media {
+  margin: 5% auto;
+  padding: 5% 0;
+  background-color: #FCF3EC;
+}
+.media .media-title {
+  margin-bottom: 15px;
+}
+.media .media-title .media-title_sticker {
+  height: 70px;
+  width: 70px;
+}
+.media .media-title .media-title_sticker:after {
+  content: "";
+  height: 20px;
+  width: 10px;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  border: 2px solid #FD9B9B;
+}
+.media .media-title .media-title_sticker.purple:after {
+  border-color: #B06BF1;
+}
+.media .media-title .media-title_sticker.green:after {
+  border-color: #45CCDB;
+}
+.media .media-title .media-title_sticker.turquoise:after {
+  border-color: #48DE57;
+}
+.media .media-text {
+  width: 80%;
+}
+
+/*
+  section port
+
+ */
+.port .port-body .port-body_img_desgin {
+  width: 100%;
+}
+.port .port-body .port-body_img_desgin img {
+  width: 100%;
+}
+.port .port-body .port-body_img_desgin .port-body_design:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: -16%;
+  z-index: 1111;
+  border-bottom: 16px solid #383E95;
+  border-right: 15px solid transparent;
+}
+.port .port-body .port-body-text {
+  margin: 10px 0;
+}
+.port .port-body .port-body-text h3, .port .port-body .port-body-text p {
+  padding: 5px 0;
+}
+
+/*# sourceMappingURL=layout.css.map */
