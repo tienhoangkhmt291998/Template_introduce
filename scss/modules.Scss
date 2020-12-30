@@ -1,0 +1,252 @@
+@use "variable";
+$i: 1;
+
+
+/*
+  col
+ */
+.container {
+  width: 90%;
+  margin: auto;
+}
+.container-fluid {
+  width: 95%;
+  @extend %margin-auto;
+}
+
+.row {
+  @extend .fxb-d-flex;
+}
+
+$grid: (
+  container: (
+    width: 1200,
+    gap: 15,
+  ),
+  columns: (
+    max: 12,
+    gap: 30,
+  ),
+  breakpoints: (
+    default: xs,
+    sm: 768,
+    md: 992,
+    lg: 1200,
+  ),
+);
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+$containerWidth: map-deep-get($grid, "container", "width");
+$containerGap: map-deep-get($grid, "container", "gap");
+$colMax: map-deep-get($grid, "columns", "max");
+$colGap: map-deep-get($grid, "columns", "gap");
+.container-one {
+  max-width: $containerWidth * 1px;
+  margin: auto;
+}
+.container-full {
+  width: 100%;
+}
+.container1,
+.container-full {
+  padding-left: $containerGap * 1px;
+  padding-right: $containerGap * 1px;
+}
+.row-one {
+  @extend .fxb-d-flex;
+  flex-wrap: wrap;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.creaky-col {
+  padding: ($colGap / 2) * 1px;
+  background-color: white;
+  border-radius: (variable.$size-border_radius);
+  box-shadow: 5px 5px 5px gainsboro;
+}
+[class*="col-"] {
+  float: left;
+  margin-top: ($colGap / 2) * 1px;
+  margin-bottom: ($colGap / 2) * 1px;
+  padding-left: ($colGap / 2) * 1px;
+  padding-right: ($colGap / 2) * 1px;
+}
+.padding{
+  padding-top:  5px;
+  padding-bottom: 5px;
+}
+@mixin column($nameCol) {
+  @for $i from 1 through $colMax {
+    .col-#{$nameCol}-#{$i} {
+      width: (100 * $i) / $colMax * 1%;
+    }
+  }
+}
+
+@each $key, $val in map-get($grid, "breakpoints") {
+  @if ($key == "default") {
+    $colDefault: map-deep-get($grid, "breakpoints", "default");
+    @include column($colDefault);
+  } @else {
+    @media (min-width: $val * 1px) {
+      @include column($key);
+    }
+  }
+}
+
+/*
+  css flex box
+ */
+.fxb-d-flex {
+  display: flex;
+}
+
+.fxb-d-flex-wrap {
+  @extend .fxb-d-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @extend .flexbox-justify-content-between;
+}
+
+.flexbox-justify-content-between {
+  justify-content: space-between;
+}
+
+.flexbox-justify-content-end {
+  justify-content: flex-end;
+}
+
+/*
+  css button
+ */
+
+.btn {
+  padding: 0.375rem 1rem;
+  color: white;
+  @extend .btn-border-radius;
+}
+.btn:focus {
+  outline: none;
+  border: 2px solid rgba(97, 106, 232, $i);
+}
+
+.btn-Lightness {
+  background-color: variable.$color-lightness;
+}
+.btn-Saturation {
+  background-color: variable.$color-saturation;
+}
+/*
+  strong
+
+ */
+.strong-lightness {
+  color: variable.$color-lightness;
+}
+/*
+    text
+ */
+.text-align-center {
+  text-align: center;
+}
+
+/*
+  css  border
+ */
+.btn-border-radius {
+  border: none;
+  border-radius: (variable.$size-border_radius);
+}
+.radius-circle {
+  border-radius: 50%;
+}
+/*
+
+ */
+.overflow-hidden{
+  overflow: hidden;
+}
+/*
+    background-color media
+ */
+.pink {
+  background-color: #fff0f0;
+}
+.purple {
+  background-color: #f3e9fd;
+}
+.green {
+  background-color: #e3f8fa;
+}
+.turquoise {
+  background-color: #e3fae6;
+}
+
+/*
+  navbar  nav-item
+ */
+.nav-item {
+  margin: 0 variable.$margin;
+}
+/*
+    navbar-button
+ */
+.navbar-toggler {
+  display: none;
+}
+.txt-ag-center {
+  text-align: center;
+}
+
+/*
+
+   after   circle
+ */
+.aftter-circle {
+  @extend %position-relative;
+  z-index: 121321;
+  @extend .fxb-d-flex;
+  align-items: center;
+  &:after {
+    content: "";
+    height: 80px;
+    width: 80px;
+    @extend %position-absolute;
+    //top: -110%;
+    left: -18%;
+    border-radius: 50%;
+    z-index: -22;
+  }
+}
+
+/*
+  port
+ */
+.port-body{
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px #d3cdcd;
+
+  &_img_desgin{
+    @extend  %position-relative;
+    z-index: -1;
+
+    .port-body_design{
+      @extend %position-absolute;
+      z-index: 111;
+      bottom: -6px;
+      height: 26px;
+      width: 87px;
+      background-color: #5E68F9;
+      color: white;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.container-full {
+  width: 95%;
+  margin: auto;
+}
+
+/*
+  css flex box
+ */
+.flexbox-display-flex, .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flexbox-justify-content-between, .flexbox-display-flex, .row {
+  justify-content: space-between;
+}
+
+.flexbox-justify-content-end {
+  justify-content: flex-end;
+}
+
+/*
+  css button
+ */
+.btn {
+  padding: 0.375rem 1rem;
+  color: white;
+}
+
+.btn:focus {
+  outline: none;
+  border: 2px solid #616ae8;
+}
+
+.btn-Lightness {
+  background-color: #616AE8;
+}
+
+.btn-Saturation {
+  background-color: #20E5A7;
+}
+
+/*
+  css  border
+ */
+.btn-border-radius, .btn {
+  border: none;
+  border-radius: 10px;
+}
+
+/*
+  nav item
+ */
+.nav-item {
+  margin: 0 0.9375rem;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+/*
+  Menu
+ */
+.header_Menu {
+  width: 50%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button {
+  font-family: Poppins;
+  font-size: 1.125rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=Main.css.map */
